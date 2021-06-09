@@ -12,7 +12,17 @@ nnoremap <silent><leader>wa :vertical resize -5<CR>
 nnoremap <silent><leader>ww :res +5<CR>
 nnoremap <silent><leader>ws :res +5<CR>
 
-nnoremap <silent><leader>e :NERDTree<CR>
+" System clipboard copy commands
+nmap <silent><leader>y "+y
+nmap <silent><leader>p "+p
 
+" New line and Escape
+nmap <silent><leader>o o<esc>
+nmap <silent><leader>O O<esc>
+
+" File tree
+nnoremap <silent><leader>e :NERDTree<CR>
 "Search files
-nnoremap <silent><leader>p :Files <CR>
+nnoremap <silent><leader>k :Files <CR>
+
+

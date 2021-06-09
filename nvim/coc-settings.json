@@ -1,0 +1,7 @@
+{
+    "python.linting.enabled": true,
+    "python.linting.pylintPath": "pylint",
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "black",
+    "coc.preferences.formatOnSaveFiletypes": ["*.py", "*.go"]
+}
