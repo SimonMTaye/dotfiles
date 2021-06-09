@@ -198,7 +198,7 @@ bindsym $mod+r mode "resize"
 # Use polybar
 exec_always --no-startup-id "killall -q polybar; polybar example"
 # Set Wallpaper
-exec_always --no-startup-id "~/.fehbg &"
+exec --no-startup-id "~/.fehbg &"
 
 # Color config
 client.focused #ddc000 #ddc000 #1b1b1b #ddc000
