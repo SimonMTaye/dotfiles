@@ -19,6 +19,7 @@
     "height": 30,
 
     "modules-left": [
+        "clock",
         "sway/workspaces",
         "sway/mode"
     ],
@@ -26,11 +27,12 @@
         "sway/window"
     ],
     "modules-right": [
-        "network",
+        "disk",
         "memory",
         "cpu",
         "temperature",
         "battery",
+        "network",
     ],
 
 
@@ -53,6 +55,13 @@
         ],
         "tooltip": true
     },
+
+    "clock": {
+        "interval": 60,
+        "timezone": "UTC",
+        "format": "{:%H:%M}",
+        "max-length": 25
+    },
     "cpu": {
         "interval": 5,
         "format": "  {usage}%", // Icon: microchip
@@ -69,12 +78,16 @@
             "critical": 90
         }
     },
+    "disk": {
+        "interval": 120, 
+        "format": "  {percentage_used}%"
 
+    },
     "network": {
         "interval": 5,
-        "format-wifi": "  {essid} ({signalStrength}%)", // Icon: wifi
-        "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
-        "format-disconnected": "⚠  Disconnected",
+        "format-wifi": "  ({signalStrength}%)", // Icon: wifi
+        "format-ethernet": "  {ipaddr}/{cidr}", // Icon: ethernet
+        "format-disconnected": "⚠",
         "tooltip-format": "{ifname}: {ipaddr}"
     },
 

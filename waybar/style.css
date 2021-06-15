@@ -57,6 +57,7 @@
 /* Each module */
 #battery,
 #clock,
+#disk,
 #cpu,
 #custom-keyboard-layout,
 #memory,
@@ -100,6 +101,7 @@
 
 #clock {
     font-weight: bold;
+    font-size: 14px;
 }
 
 #cpu {
