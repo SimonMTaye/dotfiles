@@ -3,7 +3,7 @@ set $mod Mod4
 set $alt Mod1
 
 # Default apps/options
-set $menu "rofi -combi-modi drun,ssh,window,run -theme ~/.config/sway/slate.rasi -show drun"
+set $menu "rofi -combi-modi drun,ssh,window,run -show drun"
 set $term terminator
 set $wall ~/Pictures/wall.png
 
@@ -14,6 +14,9 @@ font pango:Open Sans, monospace 12
 # Border options
 default_border none
 default_floating_border normal 0
+
+# Mouse hovering doesn't change window
+focus_follows_mouse no
 
 #### Keyboard shortcuts for volume, backlight and fan control
     # Use pactl to adjust volume in PulseAudio.
@@ -140,11 +143,11 @@ default_floating_border normal 0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
-# restart sway inplace (preserves your layout/session, can be used to upgrade i3)
+# restart sway inplace (preserves your layout/session)
 bindsym $mod+Shift+r restart
 # exit sway (logs you out of your X session)
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
-# resize window (you can also use the mouse for that)
+# Resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -168,11 +171,19 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-
 bindsym $mod+r mode "resize"
 
 # Set Wallpaper
 output * bg $wall fill
+
+input type:touchpad {
+    accel_profile adaptive
+    tap enabled
+    natural_scroll enabled
+    scroll_factor 0.3
+    tap_button_map lrm
+    click_method button_areas
+}
 
 #Use waybar
 bar {
