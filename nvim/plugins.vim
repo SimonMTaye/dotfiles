@@ -7,8 +7,4 @@ Plug 'morhetz/gruvbox'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'puremourning/vimspector'
 Plug 'tpope/vim-fugitive'
-
 call plug#end()
-
-"let g:vimspector_enable_mappings = 'HUMAN'
-"packadd! vimspector

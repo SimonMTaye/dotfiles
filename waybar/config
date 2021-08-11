@@ -27,9 +27,8 @@
         "sway/window"
     ],
     "modules-right": [
-        "disk",
-        "memory",
         "cpu",
+        "disk",
         "temperature",
         "battery",
         "network",
@@ -45,7 +44,7 @@
         // Connected to AC
         "format": "  {icon}  {capacity}%", // Icon: bolt
         // Not connected to AC
-        "format-discharging": "{icon}  {capacity}%",
+        "format-discharging": " {power} W  {icon} {capacity}%",
         "format-icons": [
             "", // Icon: battery-full
             "", // Icon: battery-three-quarters
@@ -53,7 +52,8 @@
             "", // Icon: battery-quarter
             ""  // Icon: battery-empty
         ],
-        "tooltip": true
+        "tooltip": true,
+        "tooltip-format": "{timeTo}"
     },
 
     "clock": {
@@ -72,7 +72,7 @@
     },
     "memory": {
         "interval": 5,
-        "format": "  {}%", // Icon: memory
+        "format": "  {used:0.1f} G", // Icon: memory
         "states": {
             "warning": 70,
             "critical": 90
@@ -85,7 +85,7 @@
     },
     "network": {
         "interval": 5,
-        "format-wifi": "  ({signalStrength}%)", // Icon: wifi
+        "format-wifi": "", // Icon: wifi
         "format-ethernet": "  {ipaddr}/{cidr}", // Icon: ethernet
         "format-disconnected": "⚠",
         "tooltip-format": "{ifname}: {ipaddr}"
@@ -135,8 +135,8 @@
     },
 
     "temperature": {
-      "critical-threshold": 80,
-      "interval": 5,
+      "critical-threshold": 85,
+      "interval": 20,
       "format": "{icon}  {temperatureC}°C",
       "format-icons": [
           "", // Icon: temperature-empty

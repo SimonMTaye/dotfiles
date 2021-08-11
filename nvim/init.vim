@@ -1,6 +1,7 @@
-so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/maps.vim
+so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/coc-config.vim
+so ~/.config/nvim/vimspector-maps.vim
 
 set noerrorbells
 

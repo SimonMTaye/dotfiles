@@ -23,6 +23,6 @@ nmap <silent><leader>O O<esc>
 " File tree
 nnoremap <silent><leader>e :NERDTree<CR>
 "Search files
-nnoremap <silent><leader>k :Files <CR>
+nnoremap <silent><leader><leader> :Files <CR>
 
 
