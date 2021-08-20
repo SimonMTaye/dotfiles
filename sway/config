@@ -15,6 +15,14 @@ font pango:Open Sans, monospace 12
 default_border none
 default_floating_border normal 0
 
+# Color config (gruvbox inspired)
+# color class           border  background  text    indicator   child_border
+client.focused          #282828 #282828     #d65d0e #d65d0e     #282828 
+client.focused_inactive #32302f #32302f     #d65d0e #d65d0e     #32302f 
+client.unfocused        #32302f #32302f     #d65d0e #d65d0e     #32302f 
+client.placeholder      #282828 #282828     #d65d0e #d65d0e     #282828 
+client.background       #282828 
+
 #Set refresh rate to 48Hz for battery
 output eDP-1 mode 1920x1080@48Hz
 # Mouse hovering doesn't change window

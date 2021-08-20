@@ -15,8 +15,11 @@
 - rofi
 - git
 - terminator
-- xclip
+- wl-clipboard
 - qutebrowser
+    - **To setup auto-login**
+    - bitwarden-dmenu
+    - bitwarden-cli
 - sudo
 - texinfo
 - fzf
@@ -24,6 +27,7 @@
 - font-awesome
 #### AUR
 - nvm :- node version manager
+    - nvm install node
 - neovim-nightly
     - install neovim python scripting 
 - rofi-dmenu (?)
