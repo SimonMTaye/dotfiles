@@ -2,6 +2,7 @@ so ~/.config/nvim/maps.vim
 so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/coc-config.vim
 so ~/.config/nvim/vimspector-maps.vim
+so ~/.config/nvim/treesitter.vim
 
 set noerrorbells
 
@@ -40,7 +41,7 @@ syntax enable
 
 " Theme config
 set background=dark
-colorscheme palenight
+colorscheme gruvbox
 let g:palenight_terminal_italics=1
 if (has("nvim"))
   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
