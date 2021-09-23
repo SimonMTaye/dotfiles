@@ -74,4 +74,3 @@ set statusline+=%{coc#status()}%{get(b:,'coc_current_function','')}
 set statusline+=%=
 set statusline+=%#Directory#
 set statusline+=\ %l:%c\ (%L)
-
